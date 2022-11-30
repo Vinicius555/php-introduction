@@ -23,9 +23,7 @@ Route::fallback(function () {
     return 'Error ao tenta acessa essa página <a href="' . route('site.index') . '">clique aqui</a> para voltar para a pagina principal';
 });
 Route::prefix('/app')->group(function () {
-    Route::get('/fornecedores', function () {
-        echo 'fornecedores web';
-    })->name('app.fornecedores');
+    Route::get('/fornecedores','FornecedorController@index')->name('app.fornecedores');
     Route::get('/clientes', function () {
         echo 'clientes web';
     })->name('app.clientes');
