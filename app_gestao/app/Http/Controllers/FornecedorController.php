@@ -29,8 +29,8 @@ class FornecedorController extends Controller
             'DDD' => '89',
             'telefone'=>'0000-0000'],
         ];
-        $fornecedors = [];
-        return view('app.fornecedores.index',compact('fornecedors'));
+        $fornecedores = [];
+        return view('app.fornecedores.index',compact('fornecedores'));
 
         
         
