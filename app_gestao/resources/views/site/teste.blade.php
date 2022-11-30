@@ -1,3 +1,3 @@
- TESTE P1 = {{$x}}
+ TESTE P1 = {{$p1}}
  <br>
- TESTE P2 = {{$y}}
+ TESTE P2 = {{$p2}}
