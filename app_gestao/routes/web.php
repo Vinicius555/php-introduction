@@ -34,3 +34,14 @@ Route::prefix('/app')->group(function () {
     })->name('app.produtos');
 });
 Route::get('/teste/{p1}/{p2}', 'TesteController@teste')->name('site.teste');
+
+
+
+//teste banco de dados
+//$this->get('/test-conn', function () {
+    //$user = \App\User::create([
+       // 'name' => 'vinicius',
+        //'email' => 'vinicius@gmail.com',
+        //'password' => bcrypt('123456'),
+    //]);
+//});
