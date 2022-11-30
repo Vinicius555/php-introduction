@@ -152,14 +152,14 @@ Status:{{$fornecedor[0]['status']}}
 
 @isset($fornecedores)
         
-    @forelse($fornecedors as $indice => $fornecedor)
-        fornecedor:{{$fornecedor['nome']}}
+    @forelse($fornecedores as $indice => $fornecedores)
+        fornecedor:{{$fornecedores['nome']}}
         <br>
-        status:{{$fornecedor['status']}}
+        status:{{$fornecedores['status']}}
         <br>
-        CNPJ: {{ $fornecedor['cnpj'] ?? 'Dado não preenchido.' }}
+        CNPJ: {{ $fornecedores['cnpj'] ?? 'Dado não preenchido.' }}
         <br>
-        Telefone:({{$fornecedor['DDD'] ?? '0' }}) {{$fornecedor['telefone']}}
+        Telefone:({{$fornecedores['DDD'] ?? '0' }}) {{$fornecedores['telefone']}}
         <hr>
     @empty
         Não tem fornecedores cadastrados.
