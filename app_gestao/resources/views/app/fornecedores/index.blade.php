@@ -146,9 +146,7 @@ Status:{{$fornecedor[0]['status']}}
     @endforeach
 @endisset
 
-
---}}
-
+--O operador @forelse vai pecorrer o array,porem se ele estiver vazio vai execultar o @empty
 
 @isset($fornecedores)
         
@@ -164,4 +162,37 @@ Status:{{$fornecedor[0]['status']}}
     @empty
         Não tem fornecedores cadastrados.
     @endforelse
+@endisset
+ 
+--Para escapar da tag de impressão do blade, usasse @ no começo da {{}} ficando assim @{{}}.
+
+@isset($fornecedor)
+        
+    @foreach ($fornecedor as $indice => $fornecedor )
+        fornecedor:@{{$fornecedor['nome']}}
+        <br>
+        status:@{{$fornecedor['status']}}
+        <br>
+        CNPJ: @{{ $fornecedor['cnpj'] ?? 'Dado não preenchido.' }}
+        <br>
+        Telefone:(@{{$fornecedor['DDD'] ?? '0' }}) @{{$fornecedor['telefone']}}
+        <hr>
+    @endforeach
+@endisset
+
+--}}
+
+
+@isset($fornecedor)
+        
+    @foreach ($fornecedor as $indice => $fornecedor )
+        fornecedor:@{{$fornecedor['nome']}}
+        <br>
+        status:@{{$fornecedor['status']}}
+        <br>
+        CNPJ: @{{ $fornecedor['cnpj'] ?? 'Dado não preenchido.' }}
+        <br>
+        Telefone:(@{{$fornecedor['DDD'] ?? '0' }}) @{{$fornecedor['telefone']}}
+        <hr>
+    @endforeach
 @endisset
