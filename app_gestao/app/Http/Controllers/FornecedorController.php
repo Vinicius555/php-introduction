@@ -30,7 +30,7 @@ class FornecedorController extends Controller
             'telefone'=>'0000-0000'],
         ];
         $fornecedores = [];
-        return view('app.fornecedores.index',compact('fornecedores'));
+        return view('app.fornecedores.index',compact('fornecedor'));
 
         
         
