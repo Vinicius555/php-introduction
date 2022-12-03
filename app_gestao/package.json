@@ -17,5 +17,16 @@
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0"
-    }
+    },
+    "laravel-blade":{
+        "name": "language-blade",
+        "main": "./lib/language-blade",
+        "version": "0.46.0",
+        "description": "Syntax highlighter for the Blade templating engine used in Laravel",
+        "repository": "https://github.com/jawee/language-blade",
+        "license": "MIT",
+        "engines": {
+          "atom": ">0.50.0"
+        }
+      }
 }
