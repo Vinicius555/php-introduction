@@ -16,12 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PrincipalController@principal')->name('site.index');
 Route::get('/sobre-nos', 'SobreNosController@sobrenos')->name('site.sobrenos');
 Route::get('/contato', 'ContatoController@contato')->name('site.contato');
-Route::get('/login', function () {
-    echo 'login web';
-});
-Route::fallback(function () {
-    return 'Error ao tenta acessa essa página <a href="' . route('site.index') . '">clique aqui</a> para voltar para a pagina principal';
-});
+Route::post('/contato','ContatoController@contato')->name('site.contato');
+Route::get('/login', function () {echo 'login web';});
+Route::fallback('FallbackController@fallback')->name('site.fallback');
 Route::prefix('/app')->group(function () {
     Route::get('/fornecedores','FornecedorController@index')->name('app.fornecedores');
     Route::get('/clientes', function () {
@@ -34,12 +31,3 @@ Route::prefix('/app')->group(function () {
 Route::get('/teste/{p1}/{p2}', 'TesteController@teste')->name('site.teste');
 
 
-
-//teste banco de dados
-//$this->get('/test-conn', function () {
-    //$user = \App\User::create([
-       // 'name' => 'vinicius',
-        //'email' => 'vinicius@gmail.com',
-        //'password' => bcrypt('123456'),
-    //]);
-//});
